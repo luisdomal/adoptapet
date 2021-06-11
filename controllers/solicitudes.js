@@ -117,15 +117,20 @@ function modificarSolicitud(req, res, next) {
 }
 
 
-/*function eliminarSolicitud(req, res) {
+function eliminarSolicitud(req, res) {
     // Líneas que buscan una solicitud en la bd, una vez que lo encuenra lo elimina.
   res.status(200).send(`Solicitud ${req.params.id} eliminado`);
-}*/
+}
+
+function asd (req, res){
+  res.status(200)
+}
 
 module.exports = {
   crearSolicitud,
   obtenerSolicitud,
   modificarSolicitud,
-  //eliminarSolicitud,
-  obtenerSolicitud
+  eliminarSolicitud,
+  obtenerSolicitud,
+  asd
 }

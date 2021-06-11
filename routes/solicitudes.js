@@ -21,7 +21,8 @@ const {
   crearSolicitud,
   obtenerSolicitud,
   modificarSolicitud,
-  //eliminarSolicitud
+  eliminarSolicitud,
+  asd
 } = require('../controllers/solicitudes')
 var auth = require('./auth');
 
@@ -29,6 +30,8 @@ router.get('/', auth.requerido, obtenerSolicitud)
 router.get('/:id', auth.requerido, obtenerSolicitud)
 router.post('/', auth.requerido, crearSolicitud)
 router.put('/:id', auth.requerido, modificarSolicitud)
-//router.delete('/:id', auth.requerido, eliminarSolicitud)
+router.delete('/:id', auth.opcional, eliminarSolicitud)
+router.delete('/', auth.opcional,asd)
+
 
 module.exports = router;
